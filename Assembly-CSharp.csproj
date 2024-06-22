@@ -134,8 +134,8 @@
     <Compile Include="Assets\YandexGame\Example\Scripts\SwitchSceneTest.cs" />
     <Compile Include="Assets\GemHunterMatch\Scripts\Match.cs" />
     <Compile Include="Assets\YandexGame\ScriptsYG\GraphicSettingsYG.cs" />
-    <Compile Include="Assets\GemHunterMatch\Scripts\LightManager.cs" />
     <Compile Include="Assets\YandexGame\ScriptsYG\Leaderboard\LeaderboardYG.cs" />
+    <Compile Include="Assets\GemHunterMatch\Scripts\LightManager.cs" />
     <Compile Include="Assets\GemHunterMatch\Scripts\InitLoader.cs" />
     <Compile Include="Assets\YandexGame\ScriptsYG\Language\Lang_yg.cs" />
     <Compile Include="Assets\GemHunterMatch\Scripts\GameSettings.cs" />
