@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{597775A1-E73C-EFB9-EC37-8044700CB7DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.stinkysteak.webgl-editor-server", "com.stinkysteak.webgl-editor-server.csproj", "{B49D23CE-99D3-D517-3A82-E083CF3D7420}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{9AB40E9C-4144-248D-DCEE-C3B83910A47E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{597775A1-E73C-EFB9-EC37-8044700CB7DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{597775A1-E73C-EFB9-EC37-8044700CB7DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{597775A1-E73C-EFB9-EC37-8044700CB7DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{597775A1-E73C-EFB9-EC37-8044700CB7DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B49D23CE-99D3-D517-3A82-E083CF3D7420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B49D23CE-99D3-D517-3A82-E083CF3D7420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B49D23CE-99D3-D517-3A82-E083CF3D7420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B49D23CE-99D3-D517-3A82-E083CF3D7420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AB40E9C-4144-248D-DCEE-C3B83910A47E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AB40E9C-4144-248D-DCEE-C3B83910A47E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AB40E9C-4144-248D-DCEE-C3B83910A47E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AB40E9C-4144-248D-DCEE-C3B83910A47E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
