@@ -6,7 +6,6 @@ using Match3;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
-using UnityEngine.VFX;
 using Random = UnityEngine.Random;
 
 namespace Match3
@@ -34,8 +33,8 @@ namespace Match3
 
         public Gem[] ExistingGems;
 
-        public VisualEffect GemHoldPrefab;
-        public VisualEffect HoldTrailPrefab;
+        public GameObject GemHoldPrefab;  
+        public GameObject HoldTrailPrefab;
 
         public BoundsInt Bounds => m_BoundsInt;
         public Grid Grid => m_Grid;
@@ -83,8 +82,8 @@ namespace Match3
 
         private BonusItem m_ActivatedBonus;
 
-        private VisualEffect m_GemHoldVFXInstance;
-        private VisualEffect m_HoldTrailInstance;
+        private GameObject m_GemHoldVFXInstance; //TODO
+        private GameObject m_HoldTrailInstance; //TODO
 
         private AudioSource m_FallingSoundSource;
 
@@ -190,13 +189,13 @@ namespace Match3
             if (GemHoldPrefab != null)
             {
                 m_GemHoldVFXInstance = Instantiate(GemHoldPrefab);
-                m_GemHoldVFXInstance.gameObject.SetActive(false);
+                m_GemHoldVFXInstance.SetActive(false);
             }
 
             if (HoldTrailPrefab != null)
             {
                 m_HoldTrailInstance = Instantiate(HoldTrailPrefab);
-                m_HoldTrailInstance.gameObject.SetActive(false);
+                m_HoldTrailInstance.SetActive(false);
             }
 
             ToggleInput(false);
@@ -1308,10 +1307,10 @@ namespace Match3
             var worldPos = mainCam.ScreenToWorldPoint(clickPos);
             worldPos.z = 0;
             
-            if (m_HoldTrailInstance.gameObject.activeSelf)
+            /*if (m_HoldTrailInstance.gameObject.activeSelf)
             {
                 m_HoldTrailInstance.transform.position = worldPos;
-            }
+            }*/
         
             if (pressedThisFrame)
             {
@@ -1358,21 +1357,21 @@ namespace Match3
                     if (m_GemHoldVFXInstance != null)
                     {
                         m_GemHoldVFXInstance.transform.position = m_Grid.GetCellCenterWorld(startCell);
-                        m_GemHoldVFXInstance.gameObject.SetActive(true);
+                        m_GemHoldVFXInstance.SetActive(true);
                     }
 
                     if (m_HoldTrailInstance)
                     {
                         m_HoldTrailInstance.transform.position = worldPos;
-                        m_HoldTrailInstance.gameObject.SetActive(true);
+                        m_HoldTrailInstance.SetActive(true);
                     }
                 }
             }
             else if (releasedThisFrame)
             {
                 m_IsHoldingTouch = false;
-                if(m_GemHoldVFXInstance != null) m_GemHoldVFXInstance.gameObject.SetActive(false);
-                if(m_HoldTrailInstance != null) m_HoldTrailInstance.gameObject.SetActive(false);
+                if(m_GemHoldVFXInstance != null) m_GemHoldVFXInstance.SetActive(false);
+                if(m_HoldTrailInstance != null) m_HoldTrailInstance.SetActive(false);
                 
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
                 if (UIHandler.Instance.DebugMenuOpen)

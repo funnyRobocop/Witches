@@ -1,7 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.VFX;
-using UnityEngine.VFX.Utility;
 
 namespace Match3
 {
@@ -10,7 +8,7 @@ namespace Match3
     /// </summary>
     public class ColorClean : BonusGem
     {
-        public VisualEffect UseEffect;
+        public GameObject UseEffect;
         public AudioClip TriggerSound;
         
         private Texture2D m_PositionMap;
@@ -100,11 +98,11 @@ namespace Match3
             m_PositionMap.SetPixels(infoColor, 0);
             m_PositionMap.Apply();
 
-            var vfxInst = GameManager.Instance.PoolSystem.GetInstance(UseEffect);
+            var vfxInst = GameManager.Instance.PoolSystem.GetInstance(UseEffect); //Todo
             
             vfxInst.Stop();
-            vfxInst.SetTexture(Shader.PropertyToID("PosMap"), m_PositionMap);
-            vfxInst.SetInt(Shader.PropertyToID("PosCount"), currentColor);
+            //vfxInst.SetTexture(Shader.PropertyToID("PosMap"), m_PositionMap);
+            //vfxInst.SetInt(Shader.PropertyToID("PosCount"), currentColor);
 
             vfxInst.transform.position = GameManager.Instance.Board.GetCellCenter(m_CurrentIndex);
             vfxInst.Play();

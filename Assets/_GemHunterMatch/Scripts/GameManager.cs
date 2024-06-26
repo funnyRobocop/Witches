@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.VFX;
 
 namespace Match3
 {
@@ -83,8 +82,8 @@ namespace Match3
 
         private GameObject m_BonusModePrefab;
     
-        private VisualEffect m_WinEffect;
-        private VisualEffect m_LoseEffect;
+        private GameObject m_WinEffect; //Todo
+        private GameObject m_LoseEffect; //Todo
         
         private SoundData m_SoundData = new();
 

@@ -1,6 +1,4 @@
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.VFX;
 
 namespace Match3
 {
@@ -11,7 +9,7 @@ namespace Match3
         public int Health = 3;
 
         public AudioClip DamagedClip;
-        public VisualEffect DamageEffect;
+        public GameObject DamageEffect;
     
         protected SpriteRenderer m_Renderer;
 

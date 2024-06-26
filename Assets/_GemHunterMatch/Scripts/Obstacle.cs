@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.VFX;
 
 namespace Match3
 {
@@ -10,7 +9,7 @@ namespace Match3
         public class LockStateData
         {
             public Sprite Sprite;
-            public VisualEffect UndoneVFX;
+            public GameObject UndoneVFX; //Todo
         }
         
         public LockStateData[] LockState;

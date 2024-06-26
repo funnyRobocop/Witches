@@ -99,8 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GemType: 99
   MatchEffectPrefabs:
-  - {fileID: 701145286679865675, guid: 23b89d4933186fe42b62461fed0dc73e, type: 3}
-  UISprite: {fileID: 21300000, guid: 81f8cf05ae9961b4abfca62c818cef0f, type: 3}
+  - {fileID: 8975817973068762161, guid: e562d258889719e49b22644f19b73dbc, type: 3}
+  UISprite: {fileID: 21300000, guid: d02021592ca34a84b995269818c778a7, type: 3}
   SpeedMultiplier: 1
   CanBeDestroyedWithAdjacentMatch: 1
   HealthStates:
@@ -109,4 +109,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d78687da77e2a5a4e9cb564a8a9e3988, type: 3}
   Health: 3
   DamagedClip: {fileID: 8300000, guid: 745b0601a2e6edf419958550bdb2be02, type: 3}
-  DamageEffect: {fileID: 8496191591587367252, guid: 4b068e7559536e548a1c9e17faaaf785, type: 3}
+  DamageEffect: {fileID: 8975817973068762161, guid: e562d258889719e49b22644f19b73dbc, type: 3}

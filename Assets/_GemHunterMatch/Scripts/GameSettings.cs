@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.VFX;
 
 namespace Match3
 {
@@ -37,10 +36,9 @@ namespace Match3
         
         public GameObject HintPrefab;
 
-        public VisualEffect CoinVFX;
-
-        public VisualEffect WinEffect;
-        public VisualEffect LoseEffect;
+        public GameObject CoinVFX; //Todo
+        public GameObject WinEffect; //Todo
+        public GameObject LoseEffect; //Todo
     }
 
     /// <summary>

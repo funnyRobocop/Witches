@@ -322,9 +322,9 @@ MonoBehaviour:
         m_RotationOrder: 4
       BonusModePrefab: {fileID: 0}
       HintPrefab: {fileID: 225255149699016874, guid: 761d00c63087d1f4b806eeca34a1625e, type: 3}
-      CoinVFX: {fileID: 823917878632607669, guid: 202ea16d4263b8746948d26a69af75b9, type: 3}
-      WinEffect: {fileID: 5521151422817848708, guid: 2571ff47b782206499bc35b1ce8a17ae, type: 3}
-      LoseEffect: {fileID: 4472779639423090704, guid: d22cf45439fda9d40b3e13e2404543da, type: 3}
+      CoinVFX: {fileID: 8975817973068762161, guid: e562d258889719e49b22644f19b73dbc, type: 3}
+      WinEffect: {fileID: 8975817973068762161, guid: e562d258889719e49b22644f19b73dbc, type: 3}
+      LoseEffect: {fileID: 8975817973068762161, guid: e562d258889719e49b22644f19b73dbc, type: 3}
     BonusSettings:
       Bonuses:
       - {fileID: 7805701772922581740, guid: 0060243b43e180d4691da3a5d51dfca2, type: 3}

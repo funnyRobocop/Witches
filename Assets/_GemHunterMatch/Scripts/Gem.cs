@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.VFX;
 
 namespace Match3
 {
@@ -20,7 +19,7 @@ namespace Match3
 
         public int GemType;
 
-        public VisualEffect[] MatchEffectPrefabs;
+        public GameObject[] MatchEffectPrefabs; //Todo
         public Sprite UISprite;
         
         //When a gem get added to a match, this match get stored here so we can now if this gem is currently in a match and 
