@@ -189,7 +189,7 @@ namespace Match3
             center = Board.transform.TransformPoint(center);
             
             //we offset of 1 up as the top bar is thicker, so this center it better between the top & bottom bar
-            Camera.main.transform.position = center + Vector3.back * 10.0f + Vector3.up * 0.75f;
+            Camera.main.transform.position = center + Vector3.back * 10.0f + Vector3.up * LevelData.Instance.CameraPosY;
 
             float halfSize = 0.0f;
             

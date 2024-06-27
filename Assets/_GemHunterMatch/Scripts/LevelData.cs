@@ -26,6 +26,7 @@ namespace Match3
         
         [Header("Visuals")]
         public float BorderMargin = 0.3f;
+        public float CameraPosY;
         public SpriteRenderer Background;
         
         [Header("Audio")] 

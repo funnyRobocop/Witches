@@ -1822,6 +1822,7 @@ MonoBehaviour:
   - Gem: {fileID: 2206938031270595392, guid: 0a54b5a0014ab394c8acc998e5cec84b, type: 3}
     Count: 2
   BorderMargin: 0.5
+  CameraPosY: 0.25
   Background: {fileID: 0}
   Music: {fileID: 0}
 --- !u!1001 &2081320853
