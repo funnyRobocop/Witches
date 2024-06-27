@@ -35,10 +35,6 @@ namespace Match3
         public GameObject BonusModePrefab;
         
         public GameObject HintPrefab;
-
-        public GameObject CoinVFX; //Todo
-        public GameObject WinEffect; //Todo
-        public GameObject LoseEffect; //Todo
     }
 
     /// <summary>
@@ -64,7 +60,7 @@ namespace Match3
 
             public virtual bool CanBeBought()
             {
-                return GameManager.Instance.Coins >= Price; 
+                return GameManager.Instance.m_PlayerData.Money >= Price; 
             }
         
             public abstract void Buy();

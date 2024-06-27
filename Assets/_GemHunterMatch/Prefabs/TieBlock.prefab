@@ -99,6 +99,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LockState:
   - Sprite: {fileID: 21300000, guid: 472b4b08f7b89b745beb4c82f9e37511, type: 3}
-    UndoneVFX: {fileID: 8975817973068762161, guid: e562d258889719e49b22644f19b73dbc, type: 3}
+    UndoneVFX: {fileID: 8975817973068762161, guid: 2e7731b783880bb4c89aae40abb5ca4a, type: 3}
   - Sprite: {fileID: 21300000, guid: 35dcac27df2d46341990e6602eb54d66, type: 3}
-    UndoneVFX: {fileID: 8975817973068762161, guid: e562d258889719e49b22644f19b73dbc, type: 3}
+    UndoneVFX: {fileID: 8975817973068762161, guid: 6be15e621aba8eb4c8b9e130c8424869, type: 3}

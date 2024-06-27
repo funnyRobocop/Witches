@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 5491848489864042845}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4432394, y: -0.02704534, z: 0.03659439}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -322,9 +322,6 @@ MonoBehaviour:
         m_RotationOrder: 4
       BonusModePrefab: {fileID: 0}
       HintPrefab: {fileID: 225255149699016874, guid: 761d00c63087d1f4b806eeca34a1625e, type: 3}
-      CoinVFX: {fileID: 8975817973068762161, guid: e562d258889719e49b22644f19b73dbc, type: 3}
-      WinEffect: {fileID: 8975817973068762161, guid: e562d258889719e49b22644f19b73dbc, type: 3}
-      LoseEffect: {fileID: 8975817973068762161, guid: e562d258889719e49b22644f19b73dbc, type: 3}
     BonusSettings:
       Bonuses:
       - {fileID: 7805701772922581740, guid: 0060243b43e180d4691da3a5d51dfca2, type: 3}
@@ -359,8 +356,12 @@ MonoBehaviour:
     Item: {fileID: 11400000, guid: b37a5206a85e15440865697e559cf2b3, type: 2}
   - Amount: 2
     Item: {fileID: 11400000, guid: f10da6c8fb6b1dd4a8cc38a39bde513a, type: 2}
-  - Amount: 2
+  - Amount: 1
     Item: {fileID: 11400000, guid: c306e67a2c8a5604197f03d4cdc9b674, type: 2}
+  - Amount: 3
+    Item: {fileID: 11400000, guid: 3d73d22e97a64db4e9bfee4dfe1df1f6, type: 2}
+  m_PlayerData:
+    Money: 0
 --- !u!1 &5493004279429478352
 GameObject:
   m_ObjectHideFlags: 0

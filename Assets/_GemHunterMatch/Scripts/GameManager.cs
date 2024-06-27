@@ -51,6 +51,12 @@ namespace Match3
             public float SFXVolume = 1.0f;
         }
 
+        [Serializable]
+        public class PlayerData
+        {
+            public int Money;
+        }
+
         [System.Serializable]
         public class BonusItemEntry
         {
@@ -65,9 +71,7 @@ namespace Match3
         public InputAction ClickPosition;
         public GameSettings Settings;
 
-        public int Coins { get; private set; } = 0;
-        public int Stars { get; private set; }
-        public int Lives { get; private set; } = 5;
+        public int Coins { get { return m_PlayerData.Money; }}
 
         public SoundData Volumes => m_SoundData;
 
@@ -82,10 +86,9 @@ namespace Match3
 
         private GameObject m_BonusModePrefab;
     
-        private GameObject m_WinEffect; //Todo
-        private GameObject m_LoseEffect; //Todo
         
         private SoundData m_SoundData = new();
+        public PlayerData m_PlayerData = new(); //Todo
 
         private void Awake()
         {
@@ -122,9 +125,6 @@ namespace Match3
                     m_BonusModePrefab.SetActive(false);
                 }
 
-                m_WinEffect = Instantiate(Settings.VisualSettings.WinEffect, transform);
-                m_LoseEffect = Instantiate(Settings.VisualSettings.LoseEffect, transform);
-
                 LoadSoundData();
             }
         }
@@ -147,9 +147,6 @@ namespace Match3
             GetReferences();
             UIHandler.Instance.Display(true);
             
-            m_WinEffect.gameObject.SetActive(false);
-            m_LoseEffect.gameObject.SetActive(false);
-            
             LevelData.Instance.OnAllGoalFinished += () =>
             {
                 Instance.Board.ToggleInput(false);
@@ -166,8 +163,6 @@ namespace Match3
             {
                 SwitchMusic(LevelData.Instance.Music);
             }
-
-            PoolSystem.AddNewInstance(Settings.VisualSettings.CoinVFX, 12);
 
             //we delay the board init to leave enough time for all the tile to init
             StartCoroutine(DelayedInit());
@@ -215,8 +210,6 @@ namespace Match3
         public void MainMenuOpened()
         {
             PoolSystem.Clean();
-            m_WinEffect.gameObject.SetActive(false);
-            m_LoseEffect.gameObject.SetActive(false);
             
             SwitchMusic(Instance.Settings.SoundSettings.MenuSound);
             UIHandler.Instance.Display(false);
@@ -239,29 +232,14 @@ namespace Match3
                 MusicSourceBackground.volume = Mathf.MoveTowards(MusicSourceBackground.volume, 0.0f, Time.deltaTime * 0.5f);
             }
         }
-
+        
         public void ChangeCoins(int amount)
         {
-            Coins += amount;
-            if (Coins < 0)
-                Coins = 0;
+            m_PlayerData.Money += amount;
+            if (m_PlayerData.Money < 0)
+                m_PlayerData.Money = 0;
         
             UIHandler.Instance.UpdateTopBarData();
-        }
-
-        public void WinStar()
-        {
-            Stars += 1;
-        }
-
-        public void AddLive(int amount)
-        {
-            Lives += amount;
-        }
-
-        public void LoseLife()
-        {
-            Lives -= 1;
         }
 
         public void UpdateVolumes()
@@ -340,13 +318,11 @@ namespace Match3
         public void WinTriggered()
         {
             PlaySFX(Settings.SoundSettings.WinVoice);
-            m_WinEffect.gameObject.SetActive(true);
         }
 
         public void LooseTriggered()
         {
             PlaySFX(Settings.SoundSettings.LooseVoice);
-            m_LoseEffect.gameObject.SetActive(true);
         }
 
         void SwitchMusic(AudioClip music)

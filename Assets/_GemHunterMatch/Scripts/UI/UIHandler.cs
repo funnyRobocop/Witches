@@ -99,8 +99,6 @@ namespace Match3
     
         // End Screen
         private Label m_CoinLabel;
-        private Label m_LiveLabel;
-        private Label m_StarLabel;
     
         // Shop
         private VisualElement m_ShopRoot;
@@ -176,8 +174,6 @@ namespace Match3
             m_PortraitTarget.scaleMode = ScaleMode.ScaleToFit;
             
             m_CoinLabel = m_Document.rootVisualElement.Q<Label>("CoinLabel");
-            m_LiveLabel = m_Document.rootVisualElement.Q<Label>("LiveLabel");
-            m_StarLabel = m_Document.rootVisualElement.Q<Label>("StarLabel");
 
             m_BottomBarRoot = m_Document.rootVisualElement.Q<VisualElement>("BoosterZone");
             var openSettingButton = m_BottomBarRoot.parent.Q<Button>("ButtonMenu");
@@ -614,8 +610,6 @@ namespace Match3
         public void UpdateTopBarData()
         {
             m_CoinLabel.text = GameManager.Instance.Coins.ToString();
-            m_LiveLabel.text = GameManager.Instance.Lives.ToString();
-            m_StarLabel.text = GameManager.Instance.Stars.ToString();
         }
 
         public void CreateBottomBar()

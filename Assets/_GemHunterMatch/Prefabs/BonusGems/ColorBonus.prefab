@@ -98,7 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GemType: -3
-  MatchEffectPrefabs: []
+  MatchEffectPrefabs:
+  - {fileID: 6675302182551818641, guid: 5bc9a0bf98f67d240a936bf476ba2082, type: 3}
   UISprite: {fileID: 21300000, guid: 702553098af67a645a282ce8b329ec8e, type: 3}
   SpeedMultiplier: 1
   Shapes:
@@ -115,5 +116,5 @@ MonoBehaviour:
       y: -4
       width: 0
       height: 4
-  UseEffect: {fileID: 8975817973068762161, guid: e562d258889719e49b22644f19b73dbc, type: 3}
+  UseEffect: {fileID: 5933602760919840800, guid: fcb74f28d107e284e80af037bfec14ca, type: 3}
   TriggerSound: {fileID: 8300000, guid: dc4fa3b4e75bbf24e8e51bc9f17ac22a, type: 3}

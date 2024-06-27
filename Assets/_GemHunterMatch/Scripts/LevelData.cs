@@ -93,7 +93,6 @@ namespace Match3
                         GoalLeft -= 1;
                         if (GoalLeft == 0)
                         {
-                            GameManager.Instance.WinStar();
                             GameManager.Instance.Board.ToggleInput(false);
                             OnAllGoalFinished?.Invoke();
                         }

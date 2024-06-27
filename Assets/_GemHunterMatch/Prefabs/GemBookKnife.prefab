@@ -99,6 +99,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GemType: 5
   MatchEffectPrefabs:
-  - {fileID: 8975817973068762161, guid: e562d258889719e49b22644f19b73dbc, type: 3}
+  - {fileID: 8975817973068762161, guid: 378fcc87cee6a7f4eb02a6a84dc1ed77, type: 3}
   UISprite: {fileID: 21300000, guid: b74e105e213179b4695fad9928e33abc, type: 3}
   SpeedMultiplier: 1
